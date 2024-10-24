@@ -1,0 +1,184 @@
+<!--Name : Kashish Shah 
+G Number : G01449566
+email : kshah33@gmu.edu
+-->
+<!-- This is a survey form for the students.  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        small {
+            color: #888;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Student Survey Form</h1>
+    <form action="submit_survey.php" method="post">
+
+        <!-- Text Fields -->
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required><br><br>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required><br><br>
+
+        <label for="street">Street Address:</label>
+        <input type="text" id="street" name="street" required><br><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required><br><br>
+
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required><br><br>
+
+        <label for="zip">Zip Code:</label>
+        <input type="text" id="zip" name="zip" required><br><br>
+
+        <label for="phone">Telephone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="survey_date">Date of Survey:</label>
+        <input type="date" id="survey_date" name="survey_date" required><br><br>
+
+        <!-- Checkboxes -->
+        <label>What did you like most about the campus? (Check all that apply):</label><br>
+        <input type="checkbox" id="students" name="like[]" value="students">
+        <label for="students">Students</label><br>
+
+        <input type="checkbox" id="location" name="like[]" value="location">
+        <label for="location">Location</label><br>
+
+        <input type="checkbox" id="campus" name="like[]" value="campus">
+        <label for="campus">Campus</label><br>
+
+        <input type="checkbox" id="atmosphere" name="like[]" value="atmosphere">
+        <label for="atmosphere">Atmosphere</label><br>
+
+        <input type="checkbox" id="dorm" name="like[]" value="dorm">
+        <label for="dorm">Dorm Rooms</label><br>
+
+        <input type="checkbox" id="sports" name="like[]" value="sports">
+        <label for="sports">Sports</label><br><br>
+
+        <!-- Radio Buttons -->
+        <label>How did you become interested in the university?</label><br>
+        <input type="radio" id="friends" name="interest" value="friends" required>
+        <label for="friends">Friends</label><br>
+
+        <input type="radio" id="tv" name="interest" value="tv">
+        <label for="tv">Television</label><br>
+
+        <input type="radio" id="internet" name="interest" value="internet">
+        <label for="internet">Internet</label><br>
+
+        <input type="radio" id="other" name="interest" value="other">
+        <label for="other">Other</label><br><br>
+
+        <!-- Dropdown List -->
+        <label>How likely are you to recommend this university to others?</label>
+        <select name="recommend" id="recommend" required>
+            <option value="very_likely">Very Likely</option>
+            <option value="likely">Likely</option>
+            <option value="unlikely">Unlikely</option>
+        </select><br><br>
+
+        <!-- Raffle Input -->
+        <label for="raffle">Enter 10 comma-separated numbers (1-100) for the raffle:</label><br>
+        <input type="text" id="raffle" name="raffle" pattern="^(\d{1,2}|100)(,\s*(\d{1,2}|100)){9}$" required>
+        <small>Example: 12, 34, 56, 78, 23, 45, 67, 89, 10, 33</small><br><br>
+
+        <!-- Text Area for Additional Comments -->
+        <label for="comments">Additional Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+        <!-- Submit and Cancel Buttons -->
+        <input type="submit" value="Submit">
+        <input type="reset" value="Cancel">
+
+        <div style="text-align: center; margin-top: 20px;"></div>
+        <a href="http://kshahhw1.s3-website-us-east-1.amazonaws.com" target="_blank">Homework 1 - Part 1 Page</a>
+    </div>
+    </form>
+
+    
+
+</body>
+
+</html>
